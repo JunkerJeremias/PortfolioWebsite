@@ -15,6 +15,7 @@ function PageTransitions() {
     }
 
     //Sections active class
+
     allSections.addEventListener('click', (e) => {
         const id = e.target.dataset.id;
         if (id) {
@@ -33,6 +34,7 @@ function PageTransitions() {
             element.classList.add('active');
         }
     })
+
 }
 
 PageTransitions();

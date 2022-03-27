@@ -565,6 +565,13 @@ section {
           transform: translateX(0);
 }
 
+.main-btn:not(:hover)::before {
+  width: 0%;
+  height: 100%;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+}
+
 .main-title {
   text-align: center;
 }
