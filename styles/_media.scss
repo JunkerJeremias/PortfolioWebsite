@@ -1,26 +1,30 @@
 @media screen and (max-width: 600px) {
-    .right-header {
-        padding: 0 !important;
-    }
-    .left-header .h-shape {
-        clip-path: polygon(70% 0, 100% 50%, 70% 100%, 0 100%, 0 0) !important;
-        //https://bennettfeely.com/clippy/
+    .header {
+        .right-header {
+            padding-right: 0rem !important;
+            padding-left: 0rem !important;
+            padding-top: 2rem !important;
+        }
+        .left-header {
+            padding-left: 0rem !important;
+            padding-right: 0rem !important;
+            .h-shape {
+                clip-path: polygon(70% 0, 90% 50%, 70% 100%, 0 100%, 0 0) !important;
+                //https://bennettfeely.com/clippy/
+            }
+        }
+        .right-header .name {
+            font-size: 2rem !important;
+        }
     }
     .about-container {
         grid-template-columns: 1fr;
         .right-about {
             grid-template-columns: 1fr;
-            padding-top: 2.5rem;
-        }
-        .left-about {
-            padding-right: 0;
-            p {
-                padding-right: 0;
-            }
         }
     }
-    .section {
-        padding: 2rem 2.5rem !important;
+    .header-content {
+        padding-bottom: 4rem;
     }
     .timeline {
         grid-template-columns: 1fr;
@@ -32,11 +36,11 @@
         }
     }
     .portfolios {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr !important;
         padding-bottom: 6rem;
     }
     .blogs {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr !important;
         padding-bottom: 6rem;
     }
     .contact-content-con {
@@ -77,6 +81,26 @@
             margin: 1rem .3rem;
         }
     }
+    .theme-btn {
+        width: 30px !important;
+        height: 30px !important;
+        i {
+            font-size: 1.0rem !important;
+        }
+    }
+    .main-content .section {
+        padding-left: 2rem !important;
+        padding-right: 4rem !important;
+    }
+    .main-content .sec1 {
+        padding-right: 0rem !important;
+    }
+    .main-content .sec3 {
+        padding-right: 2rem !important;
+    }
+    .main-content .sec4 {
+        padding-right: 2rem !important;
+    }
 }
 
 @media screen and (max-width: 1379px) {
@@ -87,9 +111,26 @@
     .right-header {
         padding-right: 0rem !important;
     }
-    .main-content {
-        .section {
-            padding-left: 0rem !important;
+    .sec1 {
+        padding-left: 0rem !important;
+    }
+    .sec2 {
+        padding-right: 7rem !important;
+    }
+    .header-content {
+        padding-right: 0rem;
+    }
+    .portfolios {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .blogs {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .contact-content-con .left-contact .contact-info .contact-item {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        p {
+            padding-left: 2rem !important;
         }
     }
 }
@@ -102,15 +143,15 @@
     .right-header {
         padding-right: 4rem !important;
     }
-    .main-content {
-        .section {
-            padding-left: 0rem !important;
-        }
-    }
     .about-container {
         grid-template-columns: 1fr;
         .right-about {
-            padding-top: 2.5rem;
+            //padding-top: 2.5rem;
+        }
+        .left-about {
+            p {
+                padding: 0;
+            }
         }
     }
     .main-title {
@@ -124,11 +165,20 @@
             }
         }
     }
-    .portfolios {
-        grid-template-columns: repeat(2, 1fr);
+    .sec1 {
+        padding-left: 0rem !important;
     }
-    .blogs {
-        grid-template-columns: repeat(2, 1fr);
+    .sec2 {
+        padding-right: 7rem !important;
+    }
+    .sec3 {
+        padding-right: 7rem !important;
+    }
+    .sec4 {
+        padding-right: 7rem !important;
+    }
+    .sec5 {
+        padding-right: 7rem !important;
     }
 }
 
@@ -136,10 +186,9 @@
     header {
         padding: 0;
         .right-header {
-            padding: 5 !important;
+            padding: 0rem !important;
             grid-row: 1;
             width: 90%;
-            margin: 0 auto;
             .name {
                 font-size: 2.5rem !important;
             }
@@ -147,7 +196,7 @@
         .left-header {
             margin-top: 1rem;
             .h-shape {
-                clip-path: polygon(70% 0, 80% 50%, 70% 100%, 0 100%, 0 0) !important;
+                clip-path: polygon(70% 0, 85% 50%, 70% 100%, 0 100%, 0 0) !important;
                 //https://bennettfeely.com/clippy/
             }
             .image {
@@ -160,24 +209,24 @@
     .theme-btn {
         width: 50px;
         height: 50px;
+        i {
+            font-size: 1.4rem;
+        }
     }
     .header-content {
         grid-template-columns: 1fr;
-        padding-bottom: 6rem;
-    }
-    .section {
-        padding-right: 0rem !important;
-        padding-left: 0rem !important;
     }
     .right-header {
         padding-right: 5rem !important;
     }
     .about-container {
         grid-template-columns: 1fr;
-        .right-about {
-            padding-top: 2.5rem;
-        }
-        ;
+    }
+    .portfolios {
+        grid-template-columns: 1fr;
+    }
+    .blogs {
+        grid-template-columns: 1fr;
     }
     .main-title {
         h2 {
@@ -190,10 +239,29 @@
             }
         }
     }
-    .portfolios {
-        grid-template-columns: repeat(2, 1fr);
+    .sec1 {
+        padding-left: 2rem !important;
     }
-    .blogs {
-        grid-template-columns: repeat(2, 1fr);
+    .contact-content-con .left-contact .contact-info .contact-item {
+        //justify-content: parent;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    #portfolio>div.portfolios>div.portfolio-item .hover-items {
+        h3 {
+            font-size: 1rem;
+            margin-bottom: 1rem;
+        }
+        .icons {
+            .icon {
+                width: 40px; //width and height must be the same!
+                height: 40px;
+                margin: 0 0.5rem;
+                i {
+                    font-size: 1rem;
+                }
+            }
+        }
     }
 }

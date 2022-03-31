@@ -64,7 +64,7 @@ section {
   position: absolute;
   left: 0;
   top: 0;
-  padding: 3rem 18rem;
+  padding: 3rem 8rem;
 }
 
 .section {
@@ -216,7 +216,7 @@ section {
 }
 
 .theme-btn i {
-  font-size: 1.4rem;
+  font-size: 2.0rem;
   color: var(--color-grey-2);
   pointer-events: none;
 }
@@ -228,6 +228,7 @@ section {
   -ms-grid-columns: (1fr)[2];
       grid-template-columns: repeat(2, 1fr);
   min-height: 100vh;
+  padding-right: 2rem;
 }
 
 .header-content .left-header {
@@ -377,10 +378,6 @@ section {
   width: 2rem;
   height: 2px;
   background-color: var(--color-grey-5);
-}
-
-.about-container .left-about {
-  padding-right: 5rem;
 }
 
 .about-container .left-about p {
@@ -766,12 +763,14 @@ section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: left;
+      -ms-flex-align: left;
+          align-items: left;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
 }
 
 .contact-content-con .left-contact .contact-info .contact-item p {
@@ -992,12 +991,21 @@ section {
 }
 
 @media screen and (max-width: 600px) {
-  .right-header {
-    padding: 0 !important;
+  .header .right-header {
+    padding-right: 0rem !important;
+    padding-left: 0rem !important;
+    padding-top: 2rem !important;
   }
-  .left-header .h-shape {
-    -webkit-clip-path: polygon(70% 0, 100% 50%, 70% 100%, 0 100%, 0 0) !important;
-            clip-path: polygon(70% 0, 100% 50%, 70% 100%, 0 100%, 0 0) !important;
+  .header .left-header {
+    padding-left: 0rem !important;
+    padding-right: 0rem !important;
+  }
+  .header .left-header .h-shape {
+    -webkit-clip-path: polygon(70% 0, 90% 50%, 70% 100%, 0 100%, 0 0) !important;
+            clip-path: polygon(70% 0, 90% 50%, 70% 100%, 0 100%, 0 0) !important;
+  }
+  .header .right-header .name {
+    font-size: 2rem !important;
   }
   .about-container {
     -ms-grid-columns: 1fr;
@@ -1006,16 +1014,9 @@ section {
   .about-container .right-about {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
-    padding-top: 2.5rem;
   }
-  .about-container .left-about {
-    padding-right: 0;
-  }
-  .about-container .left-about p {
-    padding-right: 0;
-  }
-  .section {
-    padding: 2rem 2.5rem !important;
+  .header-content {
+    padding-bottom: 4rem;
   }
   .timeline {
     -ms-grid-columns: 1fr;
@@ -1027,13 +1028,13 @@ section {
         grid-template-columns: 1fr;
   }
   .portfolios {
-    -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
+    -ms-grid-columns: 1fr !important;
+        grid-template-columns: 1fr !important;
     padding-bottom: 6rem;
   }
   .blogs {
-    -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
+    -ms-grid-columns: 1fr !important;
+        grid-template-columns: 1fr !important;
     padding-bottom: 6rem;
   }
   .contact-content-con {
@@ -1084,6 +1085,26 @@ section {
   .controls .control {
     margin: 1rem .3rem;
   }
+  .theme-btn {
+    width: 30px !important;
+    height: 30px !important;
+  }
+  .theme-btn i {
+    font-size: 1.0rem !important;
+  }
+  .main-content .section {
+    padding-left: 2rem !important;
+    padding-right: 4rem !important;
+  }
+  .main-content .sec1 {
+    padding-right: 0rem !important;
+  }
+  .main-content .sec3 {
+    padding-right: 2rem !important;
+  }
+  .main-content .sec4 {
+    padding-right: 2rem !important;
+  }
 }
 
 @media screen and (max-width: 1379px) {
@@ -1094,8 +1115,31 @@ section {
   .right-header {
     padding-right: 0rem !important;
   }
-  .main-content .section {
+  .sec1 {
     padding-left: 0rem !important;
+  }
+  .sec2 {
+    padding-right: 7rem !important;
+  }
+  .header-content {
+    padding-right: 0rem;
+  }
+  .portfolios {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+  .blogs {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+  .contact-content-con .left-contact .contact-info .contact-item {
+    display: -ms-grid !important;
+    display: grid !important;
+    -ms-grid-columns: 1fr !important;
+        grid-template-columns: 1fr !important;
+  }
+  .contact-content-con .left-contact .contact-info .contact-item p {
+    padding-left: 2rem !important;
   }
 }
 
@@ -1107,15 +1151,12 @@ section {
   .right-header {
     padding-right: 4rem !important;
   }
-  .main-content .section {
-    padding-left: 0rem !important;
-  }
   .about-container {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
   }
-  .about-container .right-about {
-    padding-top: 2.5rem;
+  .about-container .left-about p {
+    padding: 0;
   }
   .main-title h2 {
     font-size: 4rem;
@@ -1126,13 +1167,20 @@ section {
   .main-title h2 .bg-text {
     font-size: 5rem;
   }
-  .portfolios {
-    -ms-grid-columns: (1fr)[2];
-        grid-template-columns: repeat(2, 1fr);
+  .sec1 {
+    padding-left: 0rem !important;
   }
-  .blogs {
-    -ms-grid-columns: (1fr)[2];
-        grid-template-columns: repeat(2, 1fr);
+  .sec2 {
+    padding-right: 7rem !important;
+  }
+  .sec3 {
+    padding-right: 7rem !important;
+  }
+  .sec4 {
+    padding-right: 7rem !important;
+  }
+  .sec5 {
+    padding-right: 7rem !important;
   }
 }
 
@@ -1141,11 +1189,10 @@ section {
     padding: 0;
   }
   header .right-header {
-    padding: 5 !important;
+    padding: 0rem !important;
     -ms-grid-row: 1;
     grid-row: 1;
     width: 90%;
-    margin: 0 auto;
   }
   header .right-header .name {
     font-size: 2.5rem !important;
@@ -1154,8 +1201,8 @@ section {
     margin-top: 1rem;
   }
   header .left-header .h-shape {
-    -webkit-clip-path: polygon(70% 0, 80% 50%, 70% 100%, 0 100%, 0 0) !important;
-            clip-path: polygon(70% 0, 80% 50%, 70% 100%, 0 100%, 0 0) !important;
+    -webkit-clip-path: polygon(70% 0, 85% 50%, 70% 100%, 0 100%, 0 0) !important;
+            clip-path: polygon(70% 0, 85% 50%, 70% 100%, 0 100%, 0 0) !important;
   }
   header .left-header .image {
     height: 100% !important;
@@ -1165,14 +1212,12 @@ section {
     width: 50px;
     height: 50px;
   }
+  .theme-btn i {
+    font-size: 1.4rem;
+  }
   .header-content {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
-    padding-bottom: 6rem;
-  }
-  .section {
-    padding-right: 0rem !important;
-    padding-left: 0rem !important;
   }
   .right-header {
     padding-right: 5rem !important;
@@ -1181,8 +1226,13 @@ section {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
   }
-  .about-container .right-about {
-    padding-top: 2.5rem;
+  .portfolios {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .blogs {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
   }
   .main-title h2 {
     font-size: 3rem;
@@ -1193,13 +1243,23 @@ section {
   .main-title h2 .bg-text {
     font-size: 3.5rem;
   }
-  .portfolios {
-    -ms-grid-columns: (1fr)[2];
-        grid-template-columns: repeat(2, 1fr);
+  .sec1 {
+    padding-left: 2rem !important;
   }
-  .blogs {
-    -ms-grid-columns: (1fr)[2];
-        grid-template-columns: repeat(2, 1fr);
+}
+
+@media screen and (max-width: 300px) {
+  #portfolio > div.portfolios > div.portfolio-item .hover-items h3 {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+  #portfolio > div.portfolios > div.portfolio-item .hover-items .icons .icon {
+    width: 40px;
+    height: 40px;
+    margin: 0 0.5rem;
+  }
+  #portfolio > div.portfolios > div.portfolio-item .hover-items .icons .icon i {
+    font-size: 1rem;
   }
 }
 /*# sourceMappingURL=styles.css.map */
